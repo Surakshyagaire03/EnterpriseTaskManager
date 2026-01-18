@@ -24,7 +24,6 @@
 /public/packs
 /public/packs-test
 /public/assets
-/public/packs-test
 
 # Ignore system files
 .DS_Store
