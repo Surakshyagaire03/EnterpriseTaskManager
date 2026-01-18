@@ -1,0 +1,17 @@
+<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+  <h2 style="color: #2a9d8f;">Hello <%= @assignee.first_name.presence || @assignee.email %>,</h2>
+
+  <p>You have been assigned a new task by <strong><%= @creator.first_name.presence || @creator.email %></strong>.</p>
+
+  <h3 style="color: #264653;">Task Details:</h3>
+  <ul>
+    <li><strong>Title:</strong> <%= @task.title %></li>
+    <li><strong>Description:</strong> <%= @task.description %></li>
+    <li><strong>Due Date:</strong> <%= @task.due_date.strftime("%d %b %Y") if @task.due_date %></li>
+    <li><strong>Status:</strong> <%= @task.status.capitalize %></li>
+  </ul>
+
+  <p>Please login to the Task Manager to view or update this task.</p>
+
+  <p style="color: #e76f51;">Thank you,<br>Enterprise Task Manager Team</p>
+</div>

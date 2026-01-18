@@ -1,0 +1,26 @@
+<h2>Edit Task</h2>
+
+<%= form_with model: @task, local: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :status %>
+    <%= f.select :status, Task.statuses.keys, {}, class: "form-select" %>
+  </div>
+
+  <%= f.submit "Update Task", class: "btn btn-primary" %>
+  <%= link_to "Back", tasks_path, class: "btn btn-secondary" %>
+<% end %>

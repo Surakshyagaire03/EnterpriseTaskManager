@@ -1,0 +1,7 @@
+<p>Hello <%= @task.creator.first_name %>,</p>
+<p>Your task has been marked complete:</p>
+<ul>
+  <li>Title: <%= @task.title %></li>
+  <li>Completed by: <%= @task.assignee.first_name %></li>
+</ul>
+<p>Regards,<br>Enterprise Task Manager</p>
